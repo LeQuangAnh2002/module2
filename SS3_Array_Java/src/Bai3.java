@@ -5,20 +5,20 @@ public class Bai3
 
 {
     public static void main(String[] args) {
-        int array1[] = {1, 2, 3};
-        int array2[] = {4, 5, 6};
-        int lengthC = array1.length + array2.length;
+        int Array1[] = {1, 2, 3};
+        int Array2[] = {4, 5, 6};
+        int lengthC = Array1.length + Array2.length;
 
-        int array3[] = new int[lengthC];
+        int Array3[] = new int[lengthC];
         int plus = 0;
-        for (int i = 0; i < array1.length; i++){
-            array3[plus] = array1[i];
+        for (int i = 0; i < Array1.length; i++){
+            Array3[plus] = Array1[i];
             plus++;
         }
-        for (int j = 0 ; j < array2.length;j++){
-            array3[plus] = array2[j];
+        for (int j = 0 ; j < Array2.length;j++){
+            Array3[plus] = Array2[j];
             plus++;
         }
-        System.out.print(Arrays.toString(array3));
+        System.out.print(Arrays.toString(Array3));
     }
 }
