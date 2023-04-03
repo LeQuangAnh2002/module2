@@ -20,17 +20,17 @@ public class Bai1 {
                 int m= sc.nextInt();
                 System.out.print("Nhập số cột");
                 int n = sc.nextInt();
-                hinhChuNhat.hinhChuNhat(m,n);
+                HinhChuNhat.hinhChuNhat(m,n);
                 break;
             case 2:
                 System.out.print("Nhập số hàng");
                 int a= sc.nextInt();
-                hinhChuNhat.tamGiacVuong(a);
+                HinhChuNhat.tamGiacVuong(a);
                 break;
             case 3:
                 System.out.print("Nhập số hàng");
                 int b= sc.nextInt();
-                hinhChuNhat.tamGiacNguoc(b);
+                HinhChuNhat.tamGiacNguoc(b);
                 break;
             default:
                 System.exit(0);

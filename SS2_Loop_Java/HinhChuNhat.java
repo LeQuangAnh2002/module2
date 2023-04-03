@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class hinhChuNhat {
+public class HinhChuNhat {
     public static  void hinhChuNhat(int m,int n){
 
         for (int i = 0 ; i < m ; i++){
