@@ -1,3 +1,7 @@
+package codegym.com.bai1;
+
+import codegym.com.bai1.Circle;
+
 import java.util.Scanner;
 
 public class TestCircle {

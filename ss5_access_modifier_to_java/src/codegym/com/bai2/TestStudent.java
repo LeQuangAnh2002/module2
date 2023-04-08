@@ -1,3 +1,7 @@
+package codegym.com.bai2;
+
+import codegym.com.bai2.Student;
+
 import java.util.Scanner;
 
 public class TestStudent {

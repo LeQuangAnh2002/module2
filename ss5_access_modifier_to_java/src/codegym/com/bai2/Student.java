@@ -1,3 +1,5 @@
+package codegym.com.bai2;
+
 public class Student {
     private String name, classes;
     public Student(){
