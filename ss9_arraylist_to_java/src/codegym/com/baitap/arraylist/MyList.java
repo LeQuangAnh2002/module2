@@ -1,5 +1,7 @@
 package codegym.com.baitap.arraylist;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class MyList<E> implements MyListImplements<E> {
@@ -75,8 +77,11 @@ public class MyList<E> implements MyListImplements<E> {
     }
 
 
-    public Object clone() throws CloneNotSupportedException{
-        return super.clone();
+    public Object clone() {
+        MyList<E> newElements = new MyList<>();
+        newElements.elements = Arrays.copyOf(elements,size);
+        newElements.size = size;
+        return newElements;
     }
 
 
