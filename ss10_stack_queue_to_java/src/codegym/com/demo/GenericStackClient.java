@@ -30,6 +30,7 @@ public class GenericStackClient {
         }
         System.out.println("\n3.3 Size of stack after pop operations : " + stack.size());
     }
+
     public static void main(String[] args) {
         System.out.println("1. Stack of Strings");
         stackOfIString();
