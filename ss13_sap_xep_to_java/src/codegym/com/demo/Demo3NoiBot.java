@@ -30,6 +30,7 @@ public class Demo3NoiBot {
                     int temp = list[i];
                     list[i] = list[i + 1];
                     list[i + 1] = temp;
+                    needNextPass = true;
                 }
             }
             if(needNextPass == false){
