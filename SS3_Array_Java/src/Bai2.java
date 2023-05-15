@@ -22,7 +22,7 @@ public class Bai2
         int giaTri = sc.nextInt();
         System.out.print("Vị trí chèn : ");
         int viTri = sc.nextInt();
-        for (int i =phanTu-1 ; i >= viTri; i--){
+        for (int i = phanTu-1 ; i >= viTri; i--){
             daySo[i+1] =daySo[i]; // dịch phần tử sang phải 1 vi trí
 
         }
