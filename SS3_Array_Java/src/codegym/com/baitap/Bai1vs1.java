@@ -6,14 +6,12 @@ public class Bai1vs1 {
     public static int timViTriCanTim(int[] list, int phanTu){
         int viTri = -1;
         for (int i = 0 ; i < list.length; i++){
-            if(phanTu == viTri){
-                System.out.println(phanTu +" Không tồn tại trong mảng ");
-            }else{
+
                 if (phanTu == list[i]){
                     viTri = i;
                 }
             }
-        }
+
         return viTri;
     }
     public static int[] xoaPhanTu(int[] daySo, int viTri){
@@ -26,6 +24,7 @@ public class Bai1vs1 {
             }
             return daySoMoi;
     }
+
     public static void main(String[] args) {
         int size ;
         int[] array;

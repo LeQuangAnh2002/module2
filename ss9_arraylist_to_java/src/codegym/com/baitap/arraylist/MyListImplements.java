@@ -1,8 +1,7 @@
 package codegym.com.baitap.arraylist;
 
-import java.util.List;
 
-public interface MyListImplements<E> extends java.lang.Iterable<E>{
+public interface MyListImplements<E> extends Iterable{
     public void add(E e);
     public void display();
     public void add(int index, E element);
