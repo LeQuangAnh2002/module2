@@ -6,9 +6,7 @@ import codegym.com.service.Impl.EmployeeSerivceImpl;
 import java.util.Scanner;
 
 public class FuramaController {
-    public static void main(String[] args) {
-        displayMainMenu();
-    }
+
     public static void displayMainMenu(){
         Scanner sc = new Scanner(System.in);
         boolean check = true;
@@ -48,6 +46,7 @@ public class FuramaController {
         EmployeeSerivceImpl employeeService = new EmployeeSerivceImpl();
         boolean check = true;
         while (check){
+            System.out.println("-------------------------");
             System.out.println("1.Display list employees");
             System.out.println("2.Add new employee");
             System.out.println("3.Edit employee");
@@ -60,6 +59,13 @@ public class FuramaController {
                     break;
                 case 2:
                     employeeService.add();
+                    break;
+                case 3:
+                    employeeService.edit();
+                    employeeService.display();
+                    break;
+                case 4:
+                    displayMainMenu();
                     break;
 
             }
