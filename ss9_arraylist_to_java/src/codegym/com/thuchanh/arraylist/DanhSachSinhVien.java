@@ -1,5 +1,6 @@
 package codegym.com.thuchanh.arraylist;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -68,5 +69,20 @@ public class DanhSachSinhVien {
 
             }
         });
+    }
+    //10. Ghi xuống file
+    public  void ghiDuLieuXuongFile(File file){
+
+        try {
+            OutputStream os = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(os);
+            for (Students student: danhSach){
+                oos.writeObject(student);
+            }
+            oos.flush();
+            oos.close();
+        }catch (IOException e){
+
+        }
     }
 }

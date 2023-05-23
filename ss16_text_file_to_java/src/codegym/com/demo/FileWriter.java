@@ -39,7 +39,7 @@ public class FileWriter {
                 if(line == null) {
                     break;
                 }
-                String[] txt = line.split(";");
+                String[] txt = line.split("-");
                 String name = txt[0];
                 int age = Integer.parseInt(txt[1]);
                 double mark = Double.parseDouble(txt[2]);
@@ -64,6 +64,10 @@ public class FileWriter {
         list.add(s7);
         list.add(s8);
         fileWriter.writeToOne(list);
+        List<Student> list1 = fileWriter.readFromFile();
+        for (Student o: list1){
+            System.out.println(o);
+        }
 
 
     }

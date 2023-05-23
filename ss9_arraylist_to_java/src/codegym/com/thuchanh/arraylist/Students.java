@@ -1,8 +1,9 @@
 package codegym.com.thuchanh.arraylist;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Students implements Comparable<Students>{
+public class Students implements Comparable<Students>, Serializable {
     private String id;
     private String hoVaTen;
     private int namSinh;

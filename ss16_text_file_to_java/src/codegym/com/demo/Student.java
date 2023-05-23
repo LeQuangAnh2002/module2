@@ -40,6 +40,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return name +"\t"+ age+"\t"+ mark;
+        return name +"-"+ age+"-"+ mark;
     }
 }

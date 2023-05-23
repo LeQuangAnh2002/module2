@@ -3,44 +3,29 @@ package codegym.com.model.facility;
 import codegym.com.model.facility.Facility;
 
 public class House extends Facility {
-        private String standard_room;
-        private String description;
+        private String tieuChuanPhong;
+        private int soTang;
 
     public House() {
     }
 
-    public House(String standard_room, String description) {
-        this.standard_room = standard_room;
-        this.description = description;
+    public House(String tieuChuanPhong, int soTang) {
+        this.tieuChuanPhong = tieuChuanPhong;
+        this.soTang = soTang;
     }
 
-    public House(String name, double area, double cost, int max_people, String standard_room, String description) {
-        super(name, area, cost, max_people);
-        this.standard_room = standard_room;
-        this.description = description;
+    public House(String maDichVu, String tenDichVu, double chiPhiThue, int soLuongToiDa, String kieuThue, String tieuChuanPhong, int soTang) {
+        super(maDichVu, tenDichVu, chiPhiThue, soLuongToiDa, kieuThue);
+        this.tieuChuanPhong = tieuChuanPhong;
+        this.soTang = soTang;
     }
 
-    public String getStandard_room() {
-        return standard_room;
-    }
-
-    public void setStandard_room(String standard_room) {
-        this.standard_room = standard_room;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     @Override
     public String toString() {
         return "House{" +
-                "standard_room='" + standard_room + '\'' +
-                ", description='" + description + '\'' +
+                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                ", soTang=" + soTang +
                 super.toString()+
                 '}';
     }

@@ -1,60 +1,72 @@
 package codegym.com.model.facility;
 
 public abstract class Facility {
-        private String name;
-        private double area;
-        private double cost;
-        private int max_people;
+        private String maDichVu;
+
+        private String tenDichVu;
+        private double chiPhiThue;
+        private int soLuongToiDa;
+        private String kieuThue;
 
     public Facility() {
     }
 
-    public Facility(String name, double area, double cost, int max_people) {
-        this.name = name;
-        this.area = area;
-        this.cost = cost;
-        this.max_people = max_people;
+    public Facility(String maDichVu, String tenDichVu, double chiPhiThue, int soLuongToiDa, String kieuThue) {
+        this.maDichVu = maDichVu;
+        this.tenDichVu = tenDichVu;
+        this.chiPhiThue = chiPhiThue;
+        this.soLuongToiDa = soLuongToiDa;
+        this.kieuThue = kieuThue;
     }
 
-    public String getName() {
-        return name;
+    public String getMaDichVu() {
+        return maDichVu;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMaDichVu(String maDichVu) {
+        this.maDichVu = maDichVu;
     }
 
-    public double getArea() {
-        return area;
+    public String getTenDichVu() {
+        return tenDichVu;
     }
 
-    public void setArea(double area) {
-        this.area = area;
+    public void setTenDichVu(String tenDichVu) {
+        this.tenDichVu = tenDichVu;
     }
 
-    public double getCost() {
-        return cost;
+    public double getChiPhiThue() {
+        return chiPhiThue;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setChiPhiThue(double chiPhiThue) {
+        this.chiPhiThue = chiPhiThue;
     }
 
-    public int getMax_people() {
-        return max_people;
+    public int getSoLuongToiDa() {
+        return soLuongToiDa;
     }
 
-    public void setMax_people(int max_people) {
-        this.max_people = max_people;
+    public void setSoLuongToiDa(int soLuongToiDa) {
+        this.soLuongToiDa = soLuongToiDa;
+    }
+
+    public String getKieuThue() {
+        return kieuThue;
+    }
+
+    public void setKieuThue(String kieuThue) {
+        this.kieuThue = kieuThue;
     }
 
     @Override
     public String toString() {
         return "Facility{" +
-                "name='" + name + '\'' +
-                ", area=" + area +
-                ", cost=" + cost +
-                ", max_people=" + max_people +
+                "maDichVu='" + maDichVu + '\'' +
+                ", tenDichVu='" + tenDichVu + '\'' +
+                ", chiPhiThue=" + chiPhiThue +
+                ", soLuongToiDa=" + soLuongToiDa +
+                ", kieuThue='" + kieuThue + '\'' +
                 '}';
     }
 }

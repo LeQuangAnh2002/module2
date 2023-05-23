@@ -1,20 +1,21 @@
 package codegym.com.model.person;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class Person {
+public abstract class Person implements Serializable {
     private String id;
     private String name;
     private int age;
     private String address;
     private String phone;
-    private boolean gender;
+    private String gender;
     private String email;
 
     public Person() {
     }
 
-    public Person(String id, String name, int age, String address, String phone, boolean gender, String email) {
+    public Person(String id, String name, int age, String address, String phone, String gender, String email) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -64,11 +65,11 @@ public abstract class Person {
         this.phone = phone;
     }
 
-    public boolean isGender() {
+    public String isGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -82,6 +83,6 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return id+"\t"+ name + "\t"+ age+ "\t" + address+ "\t"+ phone + "\t"+ gender + "\t"+ email;
+        return id+" - "+ name + " - "+ age+ " - " + address+ " - "+ phone + " - "+ gender + " - "+ email;
     }
 }

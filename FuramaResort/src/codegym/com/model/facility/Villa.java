@@ -3,45 +3,58 @@ package codegym.com.model.facility;
 import codegym.com.model.facility.Facility;
 
 public class Villa extends Facility {
-    private String standard_room;
-    private String description;
+    private String tieuChuanPhong;
+    private Double dienTichHoBoi;
+    private int soTang;
 
     public Villa() {
     }
 
-    public Villa(String standard_room, String description) {
-        this.standard_room = standard_room;
-        this.description = description;
+    public Villa(String tieuChuanPhong, Double dienTichHoBoi, int soTang) {
+        this.tieuChuanPhong = tieuChuanPhong;
+        this.dienTichHoBoi = dienTichHoBoi;
+        this.soTang = soTang;
     }
 
-    public Villa(String name, double area, double cost, int max_people, String standard_room, String description) {
-        super(name, area, cost, max_people);
-        this.standard_room = standard_room;
-        this.description = description;
+    public Villa(String maDichVu, String tenDichVu, double chiPhiThue, int soLuongToiDa, String kieuThue, String tieuChuanPhong, Double dienTichHoBoi, int soTang) {
+        super(maDichVu, tenDichVu, chiPhiThue, soLuongToiDa, kieuThue);
+        this.tieuChuanPhong = tieuChuanPhong;
+        this.dienTichHoBoi = dienTichHoBoi;
+        this.soTang = soTang;
     }
 
-    public String getStandard_room() {
-        return standard_room;
+    public String getTieuChuanPhong() {
+        return tieuChuanPhong;
     }
 
-    public void setStandard_room(String standard_room) {
-        this.standard_room = standard_room;
+    public void setTieuChuanPhong(String tieuChuanPhong) {
+        this.tieuChuanPhong = tieuChuanPhong;
     }
 
-    public String getDescription() {
-        return description;
+    public Double getDienTichHoBoi() {
+        return dienTichHoBoi;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDienTichHoBoi(Double dienTichHoBoi) {
+        this.dienTichHoBoi = dienTichHoBoi;
+    }
+
+    public int getSoTang() {
+        return soTang;
+    }
+
+    public void setSoTang(int soTang) {
+        this.soTang = soTang;
     }
 
     @Override
     public String toString() {
         return "Villa{" +
-                "standard_room='" + standard_room + '\'' +
-                ", description='" + description + '\'' +
+                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                ", dienTichHoBoi=" + dienTichHoBoi +
+                ", soTang=" + soTang +
                 super.toString()+
+
                 '}';
     }
 }

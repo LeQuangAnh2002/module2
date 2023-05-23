@@ -1,6 +1,8 @@
 package codegym.com.controller;
 
+import codegym.com.service.CustomerService;
 import codegym.com.service.EmployeeService;
+import codegym.com.service.Impl.CustomerServiceImpl;
 import codegym.com.service.Impl.EmployeeSerivceImpl;
 
 import java.util.Scanner;
@@ -19,7 +21,7 @@ public class FuramaController {
             System.out.println("5.Promotion Management");
             System.out.println("6.Exit");
             System.out.println("------------------------");
-            int chon = sc.nextInt();
+            int chon = Integer.parseInt(sc.nextLine());
             switch (chon){
                 case 1:
                     displayEmployeeManagement();
@@ -52,7 +54,7 @@ public class FuramaController {
             System.out.println("3.Edit employee");
             System.out.println("4.Back main menu");
             Scanner sc = new Scanner(System.in);
-            int chon = sc.nextInt();
+            int chon = Integer.parseInt(sc.nextLine());
             switch (chon){
                 case 1:
                     employeeService.display();
@@ -67,12 +69,16 @@ public class FuramaController {
                 case 4:
                     displayMainMenu();
                     break;
-
+                case 5:
+                    employeeService.delete();
+                    break;
             }
+
         }
 
     }
     public static void displayCustomerManagement(){
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
         boolean check = true;
         while (check){
             System.out.println("1.Display list customers");
@@ -80,9 +86,20 @@ public class FuramaController {
             System.out.println("3.Edit customers");
             System.out.println("4.Back main menu");
             Scanner sc = new Scanner(System.in);
-            int chon = sc.nextInt();
+            int chon =  Integer.parseInt(sc.nextLine());
             switch (chon){
                 case 1:
+                    customerService.display();
+                    break;
+                case 2:
+                    customerService.add();
+                    break;
+                case 3:
+                    customerService.edit();
+                    customerService.display();
+                    break;
+                case 4:
+                    displayMainMenu();
                     break;
             }
         }
@@ -96,7 +113,7 @@ public class FuramaController {
             System.out.println("3.Edit facility");
             System.out.println("4.Back main menu");
             Scanner sc = new Scanner(System.in);
-            int chon = sc.nextInt();
+            int chon =  Integer.parseInt(sc.nextLine());
             switch (chon){
                 case 1:
                     break;
@@ -114,7 +131,7 @@ public class FuramaController {
             System.out.println("5.Edit contracts");
             System.out.println("6.Back main menu");
             Scanner sc = new Scanner(System.in);
-            int chon = sc.nextInt();
+            int chon =  Integer.parseInt(sc.nextLine());
             switch (chon){
                 case 1:
                     break;
@@ -129,12 +146,22 @@ public class FuramaController {
             System.out.println("2.Display list customers get voucher");
             System.out.println("3.Back main menu");
             Scanner sc = new Scanner(System.in);
-            int chon = sc.nextInt();
+            int chon =  Integer.parseInt(sc.nextLine());
             switch (chon){
                 case 1:
                     break;
             }
         }
 
+    }
+    public static void addNewFacility(){
+        boolean check = true;
+        while (check){
+            System.out.println("1.Add new Villa");
+            System.out.println("2.Add new House");
+            System.out.println("3.Add new Room");
+            System.out.println("3.Back main menu");
+
+        }
     }
 }

@@ -1,8 +1,9 @@
 package codegym.com.model.person;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Employee extends Person{
+public class Employee extends Person implements Serializable {
     Scanner scanner = new Scanner(System.in);
     private double salary;
     private String position;
@@ -17,7 +18,7 @@ public class Employee extends Person{
         this.education = education;
     }
 
-    public Employee(String id, String name, int age, String address, String phone, boolean gender, String email, double salary, String position, String education) {
+    public Employee(String id, String name, int age, String address, String phone, String gender, String email, double salary, String position, String education) {
         super(id, name, age, address, phone, gender, email);
         this.salary = salary;
         this.position = position;
@@ -48,33 +49,11 @@ public class Employee extends Person{
         this.education = education;
     }
 
-    public void enterText(){
-        System.out.println("Nhập Id:");
-        String id = scanner.nextLine();
-        System.out.println("Nhập Name:");
-        String name = scanner.nextLine();
-        System.out.println("Nhập Tuổi:");
-        int age = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập Địa Chỉ:");
-        String address = scanner.nextLine();
-        System.out.println("Nhập Số Điện Thoại :");
-        String phone = scanner.nextLine();
-        System.out.println("Nhập Giới Tính ");
-        Boolean gender = scanner.nextBoolean();
-        System.out.println("Nhập Email ");
-        String email = scanner.nextLine();
-        System.out.println("Nhập lương ");
-        double salary = Double.parseDouble(scanner.nextLine());
-        System.out.println("Nhập chức vụ ");
-        String position = scanner.nextLine();
-        System.out.println("Nhập trình độ ");
-        String education = scanner.nextLine();
-    }
 
     @Override
     public String toString() {
         return
                 super.toString()
-                + "\t"+ salary + "\t" + position + "\t" + education;
+                + " - "+ salary + " - " + position + " - " + education;
     }
 }

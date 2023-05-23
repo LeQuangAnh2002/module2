@@ -1,5 +1,6 @@
 package codegym.com.thuchanh.arraylist;
 
+import java.io.File;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -19,6 +20,7 @@ public class Test {
                     "7. Xóa một sinh viên ra khỏi danh sách dựa trên mã sinh viên \n"+
                     "8. Tìm kiếm tất cả sinh vie dựa trên tên được nhập vaào bàn phím \n"+
                     "9. Xuất ra sinh viên có điểm từ cao đến thấp \n"+
+                    "10. Lưu danh sah sinh viên xuống tập tin \n"+
                     "0. Thoát khỏi chương trình ");
             luaChon = sc.nextInt();
             sc.nextLine();
@@ -69,6 +71,13 @@ public class Test {
                 case 9:
                     dsvn.sapXepSinhVien();
                     dsvn.dislay();
+                    break;
+                case 10:
+                    System.out.println("Nhập tên file :");
+                    String tenFile =sc.nextLine();
+                    File file = new File(tenFile);
+                    dsvn.ghiDuLieuXuongFile(file);
+                    System.out.println("Lưu thành công");
                     break;
                 case 0:
                     System.exit(0);
