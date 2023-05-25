@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    FileWriteReadCustomer fileWriteReadCustomer = new FileWriteReadCustomer();
+    FileWriteReadCustomer fileWriteReadCustomer = new FileWriteReadCustomer(); // repo
     Scanner scanner =new Scanner(System.in);
     List<Customer> customerList = fileWriteReadCustomer.readToOne();
 

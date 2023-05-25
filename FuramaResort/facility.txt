@@ -1,0 +1,1 @@
+{V01 - Villa - 500.0 - 10 - FullTime - 5 sao - 15.2 - 3=0, V02 - Villa - 450.0 - 8 - FullTime - 2 sao - 10.2 - 3=0, H01 - House - 200.0 - 5 - PartTime - 1 sao - 5=0}

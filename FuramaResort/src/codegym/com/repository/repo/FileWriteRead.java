@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileWriteRead {
-    public void writeToOne(List<Employee> list) {
+    public  void writeToOne(List<Employee> list) {
         try {
             java.io.FileWriter fw = new java.io.FileWriter("employee.txt");
             BufferedWriter bw = new BufferedWriter(fw);
@@ -24,9 +24,10 @@ public class FileWriteRead {
         }
 
     }
-    public List<Employee> readFromFile(){
-        List<Employee> employees = new ArrayList<>();
+    public static List<Employee> readFromFile(){
+         List<Employee> employees = new ArrayList<>();
         try{
+
             FileReader fr = new FileReader("employee.txt");
             BufferedReader br = new BufferedReader(fr);
             String line ="";
@@ -54,7 +55,7 @@ public class FileWriteRead {
         return employees;
     }
 
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         List<Employee> list = new ArrayList<>();
         Employee epl = new Employee("E01","bao",20,"11/9 đỗ quang","0905867399","Nam","bao@gmail.com",20000,"giám đốc","đại học");
         Employee epl1 = new Employee("E02","anh",21,"20 đỗ quang","0905867399","Nữ","anh@gmail.com",50000,"bao vệ","cấp 3");

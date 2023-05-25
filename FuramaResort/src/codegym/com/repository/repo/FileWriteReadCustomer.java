@@ -13,9 +13,10 @@ public class FileWriteReadCustomer {
           BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
           for (Customer customer: list){
               bufferedWriter.write(customer.toString());
-              bufferedWriter.flush();
+
               bufferedWriter.newLine();
           }
+          bufferedWriter.flush();
           fileWriter.close();
           bufferedWriter.close();
       } catch (IOException e){

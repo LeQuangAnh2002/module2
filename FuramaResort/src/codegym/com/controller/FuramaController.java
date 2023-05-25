@@ -2,8 +2,10 @@ package codegym.com.controller;
 
 import codegym.com.service.CustomerService;
 import codegym.com.service.EmployeeService;
+import codegym.com.service.FacilityService;
 import codegym.com.service.Impl.CustomerServiceImpl;
 import codegym.com.service.Impl.EmployeeSerivceImpl;
+import codegym.com.service.Impl.FacilityServiceImpl;
 
 import java.util.Scanner;
 
@@ -52,7 +54,8 @@ public class FuramaController {
             System.out.println("1.Display list employees");
             System.out.println("2.Add new employee");
             System.out.println("3.Edit employee");
-            System.out.println("4.Back main menu");
+            System.out.println("4.Delete employee");
+            System.out.println("5.Back main menu");
             Scanner sc = new Scanner(System.in);
             int chon = Integer.parseInt(sc.nextLine());
             switch (chon){
@@ -67,11 +70,12 @@ public class FuramaController {
                     employeeService.display();
                     break;
                 case 4:
-                    displayMainMenu();
-                    break;
-                case 5:
                     employeeService.delete();
                     break;
+                case 5:
+                    displayMainMenu();
+                    break;
+
             }
 
         }
@@ -106,16 +110,29 @@ public class FuramaController {
 
     }
     public static void displayFacilityManagement(){
+        FacilityServiceImpl facilityService = new FacilityServiceImpl();
         boolean check = true;
         while (check){
+            System.out.println("------------------------");
             System.out.println("1.Display list facility");
             System.out.println("2.Add new facility");
-            System.out.println("3.Edit facility");
+            System.out.println("3.Display list facility maintenance");
             System.out.println("4.Back main menu");
             Scanner sc = new Scanner(System.in);
-            int chon =  Integer.parseInt(sc.nextLine());
+            System.out.println("Mời bạn chọn ");
+            int chon = Integer.parseInt(sc.nextLine());
             switch (chon){
                 case 1:
+                    facilityService.display();
+                    break;
+                case 2:
+                    facilityService.add();
+                    break;
+                case 3:
+                    facilityService.baoTri();
+                    break;
+                case 4:
+                    displayMainMenu();
                     break;
             }
         }
@@ -154,14 +171,5 @@ public class FuramaController {
         }
 
     }
-    public static void addNewFacility(){
-        boolean check = true;
-        while (check){
-            System.out.println("1.Add new Villa");
-            System.out.println("2.Add new House");
-            System.out.println("3.Add new Room");
-            System.out.println("3.Back main menu");
 
-        }
-    }
 }

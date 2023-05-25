@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class EmployeeSerivceImpl implements EmployeeService {
     FileWriteRead fileWriteRead = new FileWriteRead();
-    List<Employee> employeeList = fileWriteRead.readFromFile();
+    List<Employee> employeeList = fileWriteRead.readFromFile(); //
     static Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -25,7 +25,7 @@ public class EmployeeSerivceImpl implements EmployeeService {
     @Override
     public void add() {
         boolean flag = false;
-        while (!flag){
+        while (flag){
             try {
                 System.out.println("Nhập Id:");
                 String id = scanner.nextLine();
@@ -118,9 +118,10 @@ public class EmployeeSerivceImpl implements EmployeeService {
         for (int i = 0 ; i < employeeList.size(); i++){
             Employee epl = employeeList.get(i);
 
-            if(employee.getId().equalsIgnoreCase(maNhanVien)){
+            if(epl.getId().equalsIgnoreCase(maNhanVien)){
                 employee = epl;
                 employeeList.remove(employee);
+
                 break;
             }
 

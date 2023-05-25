@@ -23,10 +23,10 @@ public class House extends Facility {
 
     @Override
     public String toString() {
-        return "House{" +
-                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
-                ", soTang=" + soTang +
-                super.toString()+
-                '}';
+        return super.toString()+ " - "+
+                 tieuChuanPhong + " - " +
+                 soTang
+
+             ;
     }
 }
